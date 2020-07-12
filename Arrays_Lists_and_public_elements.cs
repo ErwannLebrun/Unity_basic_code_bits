@@ -1,4 +1,4 @@
-﻿/*
+/*
 * Copyright (c) Erwann Lebrun
 * https://www.linkedin.com/in/erwann-lebrun-b1bbb559/
 */
@@ -11,6 +11,20 @@ namespace Erwann
 {
     public class Arrays_Lists_and_public_elements : MonoBehaviour
     {
+        #region InspectorNONInteractiveElements
+
+        private float privateValue = 15f;       // private means that it is accessible to this script alone        
+        
+        public int publicValue = 2;             // public means that it is accessible from other scripts (don't forget the namespace though)
+
+        [SerializeField]        // use to be able to show and modify a private value in the Inspector (can be inline with the line below also)
+        private string privateText = "This is a test";
+
+        [HideInInspector]       // conversely this would NOT show in the Inspector
+        public int publicValue2 = 17;
+
+        #endregion
+
         #region InspectorInteractiveElements
 
         // setup to get a dropdown menu in the Inspector:
