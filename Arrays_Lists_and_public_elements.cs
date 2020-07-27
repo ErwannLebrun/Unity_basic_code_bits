@@ -26,7 +26,16 @@ namespace Erwann
         #endregion
 
         #region InspectorInteractiveElements
+        
+        
+        [Header("Group of components in the Inspector")]
+        public float componentA;
+        public float componentB;
 
+        [Header("Another group, takes in everything below this line")]
+        public float componentC;
+
+        [Header("Other stuff")]
         // setup to get a dropdown menu in the Inspector:
         public enum dropdownMenuOptions {
         Low = 100,
